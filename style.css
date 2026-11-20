@@ -1,9 +1,64 @@
-<style>
-/* CSS starts here */
-:root {
-  --bg: #0c0c0e;
+/* ============ STAGE 1-2: STYLE (CSS) ============ */
+:root{
+  --bg:#0c0c0e; --panel:#151518; --line:#2a2a30; --bone:#eeeae2; --mute:#8d8d96;
+  --uv:#7b5cff; --sale:#ff6a3d; color-scheme:dark;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--bone);font:16px/1.5 Archivo,system-ui,sans-serif}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,.logo{font-family:'Big Shoulders Display',Impact,'Arial Narrow',sans-serif;font-weight:900;letter-spacing:.02em;margin:0}
+:focus-visible{outline:2px solid var(--uv);outline-offset:2px}
 
-/* Lots more CSS here */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:1100px;margin:auto;display:flex;align-items:center;gap:12px;padding:10px 16px}
+.logo{font-size:28px;flex:1}
+.logo span{color:var(--uv)}
+.nav{display:flex;gap:4px;overflow-x:auto;max-width:1100px;margin:auto;padding:0 12px 8px;scrollbar-width:none}
+.nav button{background:none;border:0;padding:6px 12px;border-radius:99px;color:var(--mute);white-space:nowrap}
+.nav button.on{background:var(--bone);color:var(--bg)}
+.nav button.sale.on{background:var(--sale)}
+.icon{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+#count{background:var(--uv);border-radius:99px;padding:0 7px;margin-left:6px;font-size:13px}
 
-</style>
+.hero{max-width:1100px;margin:auto;padding:56px 16px 32px}
+.hero h1{font-size:clamp(52px,14vw,150px);line-height:.88;text-transform:uppercase}
+.hero p{max-width:34ch;color:var(--mute);margin:18px 0 22px}
+.cta{background:var(--bone);color:var(--bg);border:0;border-radius:6px;padding:12px 22px;font-weight:600}
+
+.tools{max-width:1100px;margin:auto;padding:12px 16px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.tools input,.tools select{background:var(--panel);border:1px solid var(--line);color:var(--bone);border-radius:8px;padding:10px 12px;font-size:16px}
+.tools input{flex:1;min-width:160px}
+.chips{display:flex;gap:6px;width:100%}
+.chips button{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px 12px}
+.chips button.on{border-color:var(--uv);color:var(--uv)}
+
+.grid{max-width:1100px;margin:auto;padding:8px 16px 48px;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;overflow:hidden;text-align:left;padding:0}
+.card:hover{border-color:var(--uv)}
+.pic{aspect-ratio:1;display:grid;place-items:center;font-size:64px;position:relative}
+.tag{position:absolute;top:8px;left:8px;background:var(--sale);color:#111;font-size:12px;font-weight:600;padding:2px 8px;border-radius:4px}
+.info{padding:10px 12px 14px}
+.info b{display:block;font-weight:600}
+.info small{color:var(--mute)}
+.was{color:var(--mute);text-decoration:line-through;margin-left:6px}
+.empty{grid-column:1/-1;color:var(--mute);padding:40px 0}
+
+/* modal + drawer */
+.veil{position:fixed;inset:0;background:#000b;display:none;z-index:40}
+.veil.open{display:block}
+.sheet{position:fixed;background:var(--panel);border:1px solid var(--line);padding:18px;overflow:auto;z-index:41;display:none}
+.sheet.open{display:block}
+#modal{left:50%;top:50%;transform:translate(-50%,-50%);width:min(440px,92vw);max-height:88vh;border-radius:10px}
+#drawer{right:0;top:0;bottom:0;width:min(400px,100vw);padding-top:calc(18px + env(safe-area-inset-top,0px))}
+.sizes{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 16px}
+.sizes button{background:none;border:1px solid var(--line);border-radius:6px;padding:8px 12px;min-width:48px}
+.sizes button.on{background:var(--bone);color:var(--bg)}
+.line{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line)}
+.line .t{flex:1}
+.qty button{background:none;border:1px solid var(--line);border-radius:6px;width:30px;height:30px}
+.total{display:flex;justify-content:space-between;font-size:20px;margin:16px 0}
+.pay{width:100%;background:var(--uv);color:#fff;border:0;border-radius:6px;padding:14px;font-weight:600}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--bone);color:var(--bg);padding:10px 18px;border-radius:8px;display:none;z-index:60;max-width:90vw;text-align:center}
+footer{border-top:1px solid var(--line);color:var(--mute);text-align:center;padding:24px 16px;font-size:14px}

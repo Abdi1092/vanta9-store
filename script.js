@@ -6,7 +6,7 @@ const PRODUCTS = [
   {id:2, name:'Night Shift High', type:'Shoes',       gender:'Men',    price:1590, icon:'👟', hue:220, sale:true},
   {id:3, name:'Ash Slide',        type:'Shoes',       gender:'Women',  price:490,  icon:'🩴', hue:300},
   {id:4, name:'Glitch Trainer',   type:'Shoes',       gender:'Kids',   price:790,  icon:'👟', hue:160},
-  {id:5, name:'Void Hoodie',      type:'Clothing',    gender:'Unisex', price:899,  icon:'🧥', hue:250},
+  {id:5, name:'Void Hoodie',      type:'Clothing',    gender:'Unisex', price:899,  icon:'🧥', hue:250, img:'images/void-hoodie.jpg.jpg'},
   {id:6, name:'Static Tee',       type:'Clothing',    gender:'Men',    price:349,  icon:'👕', hue:200},
   {id:7, name:'Cargo Pants',      type:'Clothing',    gender:'Men',    price:749,  icon:'👖', hue:30,  sale:true},
   {id:8, name:'Crop Windbreaker', type:'Clothing',    gender:'Women',  price:849,  icon:'🧥', hue:330},

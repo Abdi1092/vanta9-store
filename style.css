@@ -1,7 +1,7 @@
 /* ============ STAGE 1-2: STYLE (CSS) ============ */
 :root{
   --bg:#0c0c0e; --panel:#151518; --line:#2a2a30; --bone:#eeeae2; --mute:#8d8d96;
-  --uv:#7b5cff; --sale:#ff6a3d; color-scheme:dark;
+  #ff3d8b; --sale:#ff6a3d; color-scheme:dark;
   box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
 }
 *,*::before,*::after{box-sizing:inherit}

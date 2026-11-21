@@ -15,7 +15,7 @@ const PRODUCTS = [
   {id:11,name:'Signal Cap',       type:'Accessories', gender:'Unisex', price:249,  icon:'🧢', hue:240},
   {id:12,name:'Blackout Beanie',  type:'Accessories', gender:'Unisex', price:199,  icon:'🧶', hue:270, sale:true},
   {id:13,name:'Crossbody Bag',    type:'Accessories', gender:'Unisex', price:399,  icon:'👜', hue:20},
-  {id:14,name:'Mesh Socks 3-pack',type:'Accessories', gender:'Unisex', price:149,  icon:'🧦', hue:210},
+  {id:14,name:'Mesh Socks 3-pack',type:'Accessories', gender:'Unisex', price:149,  icon:'🧦', hue:210, img:'images/mesh socks.jpg'},
   {id:15,name:'Shadow Puffer',    type:'Clothing',    gender:'Women',  price:1990, icon:'🧥', hue:310, img:'images/shadow puffer.jpg'},
   {id:16,name:'Storm Shell',      type:'Clothing',    gender:'Men',    price:1490, icon:'🧥', hue:230, sale:true, img:'images/stormshell.jpg'}
 ];

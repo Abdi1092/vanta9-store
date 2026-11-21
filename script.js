@@ -31,9 +31,13 @@ function sizesFor(p){
   if (p.type === 'Shoes') return p.gender === 'Kids' ? ['28','30','32','34'] : ['38','39','40','41','42','43','44'];
   return p.gender === 'Kids' ? ['110','128','140'] : ['XS','S','M','L','XL'];
 }
-function pic(p){
+
+ function pic(p){
+  const photo = p.img
+    ? '<img src="'+p.img+'" alt="'+p.name+'" loading="lazy" onerror="this.remove()">'
+    : '';
   return '<div class="pic" style="background:linear-gradient(145deg,hsl('+p.hue+' 35% 22%),hsl('+p.hue+' 45% 8%))">'+
-         p.icon + (p.sale ? '<span class="tag">Sale −30%</span>' : '') + '</div>';
+         p.icon + photo + (p.sale ? '<span class="tag">Sale −30%</span>' : '') + '</div>';
 }
 function toast(msg){
   const t = $('#toast'); t.textContent = msg; t.style.display = 'block';

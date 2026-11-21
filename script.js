@@ -12,7 +12,7 @@ const PRODUCTS = [
   {id:8, name:'Crop Windbreaker', type:'Clothing',    gender:'Women',  price:849,  icon:'🧥', hue:330},
   {id:9, name:'Lowlight Leggings',type:'Clothing',    gender:'Women',  price:499,  icon:'👖', hue:280},
   {id:10,name:'Mini Hoodie',      type:'Clothing',    gender:'Kids',   price:499,  icon:'🧥', hue:190},
-  {id:11,name:'Signal Cap',       type:'Accessories', gender:'Unisex', price:249,  icon:'🧢', hue:240},
+  {id:11,name:'A letter Cap',       type:'Accessories', gender:'Unisex', price:249,  icon:'🧢', hue:240, img:'images/a cap.jpg'},
     {id:12,name:'Blackout Tee',     type:'Clothing',    gender:'Men',    price:299,  icon:'👕', hue:270, sale:true, img:'images/t shirts.jpg'},
   {id:13,name:'Crossbody Bag',    type:'Accessories', gender:'Unisex', price:399,  icon:'👜', hue:20, img:'images/crossbody bags.jpg'},
   {id:14,name:'Mesh Socks 3-pack',type:'Accessories', gender:'Unisex', price:149,  icon:'🧦', hue:210, img:'images/mesh socks.jpg'},
